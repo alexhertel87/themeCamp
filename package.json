@@ -1,0 +1,23 @@
+{
+  "name": "authenticate-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "12.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexhertel87/authenticate-me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexhertel87/authenticate-me/issues"
+  },
+  "homepage": "https://github.com/alexhertel87/authenticate-me#readme"
+}
