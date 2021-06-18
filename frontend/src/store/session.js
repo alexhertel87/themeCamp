@@ -1,15 +1,11 @@
 // frontend/src/store/session.js
 import { csrfFetch } from './csrf';
+import thunk from "redux-thunk";
+
 
 const SET_USER = 'session/setUser';
 const REMOVE_USER = 'session/removeUser';
 
-const thunk = ({ dispatch, getState }) => (next) => (action) => {
-  if (typeof action === 'function') {
-      return action(dispatch, getState);
-  }
-  return next(action);
-};
 
 
 const setUser = (user) => {
@@ -78,6 +74,14 @@ export const signup = (user) => async (dispatch) => {
   });
   const data = await response.json();
   dispatch(setUser(data.user));
+  return response;
+};
+
+export const logout = () => async (dispatch) => {
+  const response = await csrfFetch('/api/session', {
+    method: 'DELETE',
+  });
+  dispatch(removeUser());
   return response;
 };
 
