@@ -9,18 +9,28 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       userId: {
+        allowNull: false,
+        unique: true,
         type: Sequelize.INTEGER
       },
       campName: {
+        allowNull: false,
+        unique: true,
         type: Sequelize.STRING(100)
       },
       address: {
+        allowNull: false,
+        unique: true,
         type: Sequelize.STRING(50)
       },
       latitude: {
+        allowNull: false,
+        unique: true,
         type: Sequelize.DECIMAL
       },
       longitude: {
+        allowNull: false,
+        unique: true,
         type: Sequelize.DECIMAL
       },
       createdAt: {

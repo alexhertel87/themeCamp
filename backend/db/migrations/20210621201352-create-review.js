@@ -9,8 +9,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       reservationsId: {
+        allowNull: false,
+        unique: true,
         type: Sequelize.INTEGER      },
       content: {
+        allowNull: false,
         type: Sequelize.TEXT
       },
       createdAt: {

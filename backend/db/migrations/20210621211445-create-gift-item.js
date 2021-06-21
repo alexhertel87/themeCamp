@@ -9,6 +9,8 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       campId: {
+        allowNull: false,
+        unique: true,
         type: Sequelize.INTEGER
       },
       music: {

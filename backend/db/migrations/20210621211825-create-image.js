@@ -9,9 +9,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       campId: {
+        allowNull: false,
+        unique: true,
         type: Sequelize.INTEGER
       },
       url: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       createdAt: {
