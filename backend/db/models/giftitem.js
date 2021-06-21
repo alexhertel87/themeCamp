@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const GiftItems = sequelize.define('GiftItems', {
+  const GiftItem = sequelize.define('GiftItem', {
     campId: DataTypes.INTEGER,
     music: DataTypes.BOOLEAN,
     fireFeatures: DataTypes.BOOLEAN,
@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
     ice: DataTypes.BOOLEAN,
     artCar: DataTypes.BOOLEAN
   }, {});
-  GiftItems.associate = function(models) {
-    // associations can be defined here
+  GiftItem.associate = function(models) {
+    GiftItem.belongsTo(models.Camp, {foreignKey: 'campId'})
   };
-  return GiftItems;
+  return GiftItem;
 };

@@ -8,6 +8,8 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      reservationsId: {
+        type: Sequelize.INTEGER      },
       content: {
         type: Sequelize.TEXT
       },

@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     endDate: DataTypes.DATE
   }, {});
   Reservation.associate = function(models) {
-    // associations can be defined here
+    Reservation.hasMany(models.Review, { foreignKey: 'reservationsId'})
   };
   return Reservation;
 };

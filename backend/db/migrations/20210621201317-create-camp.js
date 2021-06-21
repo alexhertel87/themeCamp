@@ -12,10 +12,10 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       campName: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(100)
       },
       address: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(50)
       },
       latitude: {
         type: Sequelize.DECIMAL
