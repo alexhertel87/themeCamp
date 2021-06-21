@@ -29,17 +29,22 @@ function ProfileButton({ user }) {
     dispatch(sessionActions.logout());
   };
 
+
   return (
     <>
-      <button onClick={openMenu}>
-        <i className="fas fa-user-circle" />
+      <button className='clearButtons' onClick={openMenu}>
+      <i className="fas fa-spinner" />
       </button>
       {showMenu && (
         <ul className="profile-dropdown">
-          <li>{user.username}</li>
-          <li>{user.email}</li>
+          <li className='clearButtonsText'>{user.username}</li>
+          <li className='clearButtonsText'>{user.email}</li>
           <li>
-            <button onClick={logout}>Log Out</button>
+            <button className='clearButtons logoutButton' onClick={logout}>
+              <div className='clearButtonsText'>
+                Log Out
+              </div>
+            </button>
           </li>
         </ul>
       )}
@@ -48,3 +53,36 @@ function ProfileButton({ user }) {
 }
 
 export default ProfileButton;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // return (
+  //   <>
+  //     <button onClick={openMenu}>
+  //       <i className="fas fa-user-circle" />
+  //     </button>
+  //     {showMenu && (
+  //       <ul className="profile-dropdown">
+  //         <li>{user.username}</li>
+  //         <li>{user.email}</li>
+  //         <li>
+  //           <button onClick={logout}>Log Out</button>
+  //         </li>
+  //       </ul>
+  //     )}
+  //   </>
+  // );

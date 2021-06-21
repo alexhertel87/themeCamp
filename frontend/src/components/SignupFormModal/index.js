@@ -8,7 +8,10 @@ function SignupFormModal() {
 
   return (
     <>
-      <button onClick={() => setShowModal(true)}>Signup</button>
+      <button className="clearButtons" onClick={() => setShowModal(true)}>
+      <i class="fas fa-fire">
+        <div className='clearButtonsText'>Signup</div></i>
+      </button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <SignupForm />
@@ -16,6 +19,18 @@ function SignupFormModal() {
       )}
     </>
   );
+
 }
 
 export default SignupFormModal;
+
+// return (
+//   <>
+//     <button onClick={() => setShowModal(true)}>Signup</button>
+//     {showModal && (
+//       <Modal onClose={() => setShowModal(false)}>
+//         <SignupForm />
+//       </Modal>
+//     )}
+//   </>
+// );

@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 #modal-background {
@@ -21,5 +22,21 @@
 
 #modal-content {
   position: absolute;
-  background-color:white;
+  padding: 40px 40px 20px 40px;
+  border: 1px solid #bfaf8f;
+  box-shadow: 5px 5px 20px #bfaf8f, -5px 5px 20px #bfaf8f, 5px -5px 20px #bfaf8f,
+    -5px -5px 20px #bfaf8f;
+  border-radius: 20px;
+  color: #F2F2F2;
+  background-color: #1B2026;
+  font-family: 'Nunito';
+}
+
+form {
+  flex-direction: column;
+}
+
+.modal-label {
+  width: 100%;
+  justify-content: space-between;
 }
