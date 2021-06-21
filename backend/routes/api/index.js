@@ -5,7 +5,9 @@ const usersRouter = require('./users.js');
 
 router.use('/session', sessionRouter);
 router.use('/users', usersRouter);
-router.use('/camps', campsRouter)
+router.use('/camps', campsRouter);
+
+
 
 
 
