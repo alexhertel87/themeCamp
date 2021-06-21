@@ -4,8 +4,9 @@ const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
 
 router.use('/session', sessionRouter);
-
 router.use('/users', usersRouter);
+router.use('/camps', campsRouter)
+
 
 
 // GET /api/set-token-cookie
