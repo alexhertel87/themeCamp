@@ -17,18 +17,25 @@
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
 }
+
+/* .fa-fire {
+  color:rgb(230, 33, 33)
+} */
 
 #modal-content {
   position: absolute;
-  padding: 40px 40px 20px 40px;
-  border: 1px solid #bfaf8f;
-  box-shadow: 5px 5px 20px #bfaf8f, -5px 5px 20px #bfaf8f, 5px -5px 20px #bfaf8f,
-    -5px -5px 20px #bfaf8f;
-  border-radius: 20px;
+  padding: 10px 40px 40px 40px;
+  border: 1px solid #ac7969;
+  box-shadow:
+  5px 5px 20px #b78fbf,
+  -5px 5px 20px #bfaf8f,
+  5px -5px 20px #bfaf8f,
+  -5px -5px 20px #bfaf8f;
+  border-radius: 10px;
   color: #F2F2F2;
-  background-color: #1B2026;
+  background-color: #2e343a;
   font-family: 'Nunito';
 }
 

@@ -23,14 +23,3 @@ function SignupFormModal() {
 }
 
 export default SignupFormModal;
-
-// return (
-//   <>
-//     <button onClick={() => setShowModal(true)}>Signup</button>
-//     {showModal && (
-//       <Modal onClose={() => setShowModal(false)}>
-//         <SignupForm />
-//       </Modal>
-//     )}
-//   </>
-// );

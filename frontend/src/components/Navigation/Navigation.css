@@ -2,7 +2,7 @@ nav {
   display: grid;
  background-color: #1B2026;
   grid-template-columns: repeat(3, 1fr);
-  box-shadow: 2px 2px 15px #BFAF8F, -2px 2px 15px #BFAF8F;
+  /* box-shadow: 2px 2px 15px #BFAF8F, -2px 2px 15px #BFAF8F; */
   width: 100vw;
   height: 75px;
   top: 0;
@@ -15,6 +15,7 @@ nav {
 .right-nav {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .left-nav {
@@ -68,9 +69,20 @@ nav {
   background-color: #080B0D;
   margin: 0px;
   padding: 15px;
-  border: 6px double #BFAF8F;
+  border: 8px #e69c08;
   z-index: 0;
 }
+
+
+
+.fas.fa-spinner {
+  font-size: 30px;
+  margin-left: 20px;
+  color: greenyellow
+}
+/* .fas.fa-spinner:before {
+  color:indianred
+} */
 
 li {
   list-style: none;
