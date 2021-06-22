@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Splash from "./components/Splash/index";
 import SignupFormModal from "./components/SignupFormModal";
+// import Slideshow from './components/Slideshow'
 
 function App() {
   const dispatch = useDispatch();
@@ -15,33 +16,21 @@ function App() {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
   }, [dispatch]);
 
-  // return (
-  //   <div>
-  //     <Navigation isLoaded={isLoaded} />
-  //     {isLoaded && (
-  //       <div>
-  //           <Splash isLoaded={isLoaded} />
-  //       </div>
-  //     )}
-  //     <Footer />
-  //   </div>
-  // );
-
 
   return (
-    <>
+    <div>
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
+          <Route exact path='/'>
             <Splash isLoaded={isLoaded} />
-          <Route path="/signup">
-             <SignupFormModal />
           </Route>
-          <Footer />
         </Switch>
       )}
-    </>
+      <Footer />
+    </div>
   );
 }
+
 
 export default App;

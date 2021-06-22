@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { usePhotoContext } from '../../context/PhotoContext';
+import Slideshow from '../Slideshow/index';
 import './Splash.css'
 
 function Splash() {
@@ -8,13 +9,16 @@ function Splash() {
 
     return (
         <div className='splashComponent'>
-            <form className='booking-form'>
+            {/* <form className='booking-form'>
                 <label>
                     Thing
                     <input></input>
                 </label>
 
-            </form>
+            </form> */}
+            <div className='slideshow'>
+                <Slideshow />
+            </div>
         </div>
     )
 }

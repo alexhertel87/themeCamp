@@ -5,9 +5,27 @@
 .splashComponent {
     width: 100vw;
     height: 500px;
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
     /* border: 10px solid blueviolet; */
     box-sizing: border-box;
-    background-image: url('../../images/art-car-8.jpeg');
-    background-size: ;
+    background-size: contain;
 }
+.slideshow {
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 500px;
+}
+
+.slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+}
+
+.slide {
+    display: inline-block;
+
+    background-image: url('../../images/art-car-8.jpeg');
+    height: 400px;
+    width: 100%;
+    border-radius: 40px;
+  }

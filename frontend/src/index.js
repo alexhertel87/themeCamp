@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { ModalProvider } from "./context/Modal";
 import PhotoProvider from "./context/PhotoContext";
+import Slideshow from "./components/Slideshow";
 
 import configureStore from "./store";
 import { restoreCSRF, csrfFetch } from "./store/csrf";
