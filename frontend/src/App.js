@@ -10,6 +10,8 @@ import SignupFormModal from "./components/SignupFormModal";
 // import Search from "./components/Search/index";
 import CampPageComponent from "./components/campPage";
 import CampsComponent from "./components/splashCamps";
+import ReservationsComponent from "./components/Reservations";
+
 
 // import Slideshow from './components/Slideshow'
 
@@ -26,8 +28,16 @@ function App() {
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
-          <Route exact path='/'>
+          <Route path='/' exact>
             <Splash isLoaded={isLoaded} />
+            <CampsComponent isLoaded={isLoaded}/>
+            <ReservationsComponent isLoaded={isLoaded}/>
+          </Route>
+          <Route path='/camps/:id'>
+            <CampPageComponent isLoaded={isLoaded}/>
+          </Route>
+          <Route path='/camps/:id'>
+            <CampPageComponent isLoaded={isLoaded}/>
           </Route>
         </Switch>
       )}

@@ -20,7 +20,6 @@ function CampPageComponent({ isLoaded }) {
     const [endDate, setEndDate] = useState(new Date())
 
 
-    //userId, CampId, start_date, end_date, price
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -41,7 +40,7 @@ function CampPageComponent({ isLoaded }) {
 
         if (reservation) {
             const title = document.getElementById('bookedTitle');
-            title.CamperHTML = 'Booked!!'
+            title.CamperHTML = "You are Booked! Enjoy your visit! And, don't forget: 'Safety Third!'"
         }
 
     }
@@ -52,7 +51,7 @@ function CampPageComponent({ isLoaded }) {
             <form
             onSubmit={handleSubmit}
             >
-            <h2 id='bookedTitle'>Book Now!</h2>
+            <h2 id='bookedTitle'>Book Your Visit Now!</h2>
                 <label>
                     Start Date
                     <input
