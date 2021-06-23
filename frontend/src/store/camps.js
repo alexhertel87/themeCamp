@@ -14,12 +14,12 @@ const loadRecent = (list) => ({
     list,
 });
 
-const loadOne = (inn) => ({
+const loadOne = (camp) => ({
     type: LOAD_ONE,
-    inn
+    camp
 })
 
-export const getcamps = () => async dispatch => {
+export const getCamps = () => async dispatch => {
     const response = await csrfFetch('/api/camps');
 
     if (response.ok) {
@@ -28,7 +28,7 @@ export const getcamps = () => async dispatch => {
       }
 }
 
-export const getRecentcamps = () => async dispatch => {
+export const getRecentCamps = () => async dispatch => {
     const response = await csrfFetch('/api/camps/recent');
 
     if (response.ok) {
@@ -37,47 +37,47 @@ export const getRecentcamps = () => async dispatch => {
       }
 }
 
-export const getOneInn = (id) => async dispatch => {
+export const getOneCamp = (id) => async dispatch => {
     const response = await csrfFetch(`/api/camps/${id}`);
 
     if (response.ok) {
-        const inn = await response.json();
-        dispatch(loadOne(inn));
+        const camp = await response.json();
+        dispatch(loadOne(camp));
       }
 }
 
 const initialState = {
     list: [],
-    currentInn: null,
+    currentCamp: null,
   };
 
 const campsReducer = (state = initialState, action) => {
     switch (action.type) {
         case LOAD: {
-            const allcamps = {};
-            action.list.forEach(inn => {
-                allcamps[inn.id] = inn;
+            const allCamps = {};
+            action.list.forEach(camp => {
+                allCamps[camp.id] = camp;
             });
             return {
-                ...allcamps,
+                ...allCamps,
                 ...state,
                 list: action.list,
             };
         }
         case LOAD_RECENT: {
-            const recentcamps = {};
-            action.list.forEach(inn => {
-                recentcamps[inn.id] = inn;
+            const recentCamps = {};
+            action.list.forEach(camp => {
+                recentCamps[camp.id] = camp;
             });
             return {
-                ...recentcamps,
+                ...recentCamps,
                 ...state,
                 list: action.list,
             };
         }
         case LOAD_ONE: {
             const newState = Object.assign({}, initialState);
-            newState.currentInn = action.inn;
+            newState.currentCamp = action.camp;
             return newState;
 
         }

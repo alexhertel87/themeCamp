@@ -7,6 +7,10 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Splash from "./components/Splash/index";
 import SignupFormModal from "./components/SignupFormModal";
+// import Search from "./components/Search/index";
+import CampPageComponent from "./components/campPage";
+import CampsComponent from "./components/splashCamps";
+
 // import Slideshow from './components/Slideshow'
 
 function App() {

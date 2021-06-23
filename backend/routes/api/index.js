@@ -1,20 +1,20 @@
+// GET /api/set-token-cookie
+const asyncHandler = require('express-async-handler');
+const { setTokenCookie } = require('../../utils/auth.js');
+
 // backend/routes/api/index.js
 const router = require('express').Router();
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
 const campsRouter = require('./camps.js')
+const reserveRouter = require('./reservations.js')
 
 router.use('/session', sessionRouter);
 router.use('/users', usersRouter);
 router.use('/camps', campsRouter);
+router.use('/reservations', reserveRouter);
 
 
-
-
-
-// GET /api/set-token-cookie
-const asyncHandler = require('express-async-handler');
-const { setTokenCookie } = require('../../utils/auth.js');
 const { User } = require('../../db/models');
 router.get('/set-token-cookie', asyncHandler(async (req, res) => {
   const user = await User.findOne({
