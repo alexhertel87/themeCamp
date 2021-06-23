@@ -9,8 +9,12 @@
     color: #f2f2f2;
     box-shadow: -2px -2px 15px #BFAF8F, 2px -2px 15px #BFAF8F;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     font-family: 'Nunito';
-    font-size: 20px;
+    font-size: 18px;
+}
+
+.footer-text{
+    margin-left: 20px;
 }

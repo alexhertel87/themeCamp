@@ -1,9 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import './Slideshow.css'
+import stockImages from "../Splash/imageArr";
+import '../Splash/Splash.css'
 
-const colors = ["#0088FE", "#00C49F", "#FFBB28"];
-const delay = 3000;
+const images = stockImages;
+const delay = 5000;
 
 export default function Slideshow() {
   const [index, setIndex] = React.useState(0);
@@ -20,7 +21,7 @@ export default function Slideshow() {
     timeoutRef.current = setTimeout(
       () =>
         setIndex((prevIndex) =>
-          prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+          prevIndex === images.length - 1 ? 0 : prevIndex + 1
         ),
       delay
     );
@@ -39,17 +40,19 @@ export default function Slideshow() {
           <div>
 
           </div>
-          {colors.map((el) => (
+          {images.map((img) => (
             <div
               className="slide"
-              key={el}
-              style={{backgroundColor: el}}
-            ></div>
+              key={img.spotId}
+              style={{ background: "url("+img.url+") no-repeat center center ", backgroundSize: 'cover'  }}
+            >
+              {/* <img src={img.url}></img> */}
+            </div>
           ))}
         </div>
 
         <div className="slideshowDots">
-          {colors.map((_, idx) => (
+          {images.map((_, idx) => (
             <div
               key={idx}
               className={`slideshowDot${index === idx ? " active" : ""}`}
