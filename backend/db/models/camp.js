@@ -4,6 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER,
     campName: DataTypes.STRING,
     address: DataTypes.STRING,
+    description: DataTypes.TEXT,
     latitude: DataTypes.DECIMAL,
     longitude: DataTypes.DECIMAL
   }, {});

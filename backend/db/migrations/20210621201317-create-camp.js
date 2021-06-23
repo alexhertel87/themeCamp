@@ -10,7 +10,6 @@ module.exports = {
       },
       userId: {
         allowNull: false,
-        unique: true,
         type: Sequelize.INTEGER
       },
       campName: {
@@ -20,26 +19,30 @@ module.exports = {
       },
       address: {
         allowNull: false,
-        unique: true,
         type: Sequelize.STRING(50)
+      },
+      description: {
+        allowNull: false,
+        unique: true,
+        type: Sequelize.TEXT
       },
       latitude: {
         allowNull: false,
-        unique: true,
         type: Sequelize.DECIMAL
       },
       longitude: {
         allowNull: false,
-        unique: true,
         type: Sequelize.DECIMAL
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn("now")
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn("now")
       }
     });
   },

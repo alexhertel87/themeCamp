@@ -8,7 +8,16 @@
     "sequelize-cli": "sequelize-cli",
     "start": "per-env",
     "start:development": "nodemon -r dotenv/config ./bin/www",
-    "start:production": "node ./bin/www"
+    "start:production": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:migrate": "npx dotenv sequelize db:migrate",
+    "db:migrate:undo:all": "npx dotenv sequelize db:migrate:undo:all",
+    "db:redo": "npm run db:seed:undo:all && npm run db:migrate:undo:all && npm run db:migrate && npm run db:seed:all",
+    "db:seed:all": "npx dotenv sequelize db:seed:all",
+    "db:seed:undo:all": "npx dotenv sequelize db:seed:undo:all",
+    "db:drop": "npx dotenv sequelize db:drop",
+    "db:create": "npx dotenv sequelize db:create",
+    "db:reset": "npm run db:drop && npm run db:create && npm run db:migrate && npm run db:seed:all"
   },
   "keywords": [],
   "author": "",

@@ -10,7 +10,6 @@ module.exports = {
       },
       campId: {
         allowNull: false,
-        unique: true,
         type: Sequelize.INTEGER
       },
       url: {
@@ -19,11 +18,13 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn("now")
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn("now")
       }
     });
   },

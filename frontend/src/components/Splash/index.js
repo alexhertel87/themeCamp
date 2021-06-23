@@ -9,14 +9,10 @@ function Splash() {
 
     return (
         <div className='splashComponent'>
-            {/* <form className='booking-form'>
-                <label>
-                    Thing
-                    <input></input>
-                </label>
-
-            </form> */}
-            <div className='slideshow'>
+            <div>
+                Hello
+            </div>
+            <div className='slideshow'>Hello
                 <Slideshow />
             </div>
         </div>

@@ -67,7 +67,23 @@ const stockImages =
   { spotId: 65, url: '/Images/BM_2017_SR-65.jpeg' },
   { spotId: 66, url: '/Images/BM_2017_SR-66.jpeg' },
   { spotId: 67, url: '/Images/BM_2017_SR-67.jpeg' },
-  { spotId: 68, url: '/Images/BM_2017_SR-68.jpeg' }
+  { spotId: 68, url: '/Images/BM_2017_SR-68.jpeg' },
+  { spotId: 69, url: '/Images/BM_2017_SR-69.jpeg' },
+  { spotId: 70, url: '/Images/BM_2017_SR-70.jpeg' },
+  { spotId: 71, url: '/Images/BM_2017_SR-71.jpeg' },
+  { spotId: 72, url: '/Images/BM_2017_SR-72.jpeg' },
+  { spotId: 73, url: '/Images/BM_2017_SR-73.jpeg' },
+  { spotId: 74, url: '/Images/BM_2017_SR-74.jpeg' },
+  { spotId: 75, url: '/Images/BM_2017_SR-75.jpeg' },
+  { spotId: 76, url: '/Images/BM-2017-GIFs-1.gif' },
+  { spotId: 77, url: '/Images/BM-2017-GIFs-2.gif' },
+  { spotId: 78, url: '/Images/BM-2017-GIFs-3.gif' },
+  { spotId: 79, url: '/Images/BM-2017-GIFs-4.gif' },
+  { spotId: 80, url: '/Images/BM-2017-GIFs-5.gif' },
+  { spotId: 81, url: '/Images/BM-2017-GIFs-6.gif' },
+  { spotId: 82, url: '/Images/BM-2017-GIFs-7.gif' },
+  { spotId: 83, url: '/Images/BM-2017-GIFs-8.gif' },
+
  ]
 
 export default stockImages;
