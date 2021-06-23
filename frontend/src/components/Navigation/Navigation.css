@@ -74,7 +74,9 @@ nav {
   z-index: 0;
 }
 
-
+.fas.fa-fire:before {
+  margin-right: 30px;
+}
 
 .fas.fa-spinner {
   font-size: 30px;
