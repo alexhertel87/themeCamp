@@ -14,9 +14,9 @@ const getReservations = (payload) => ({
 })
 
 export const newReservation = payload => async dispatch => {
-    console.log(payload);
+    console.log("Payload ----> ", payload);
     const response = await csrfFetch(`/api/reservations`, {
-        method: 'post',
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
@@ -41,7 +41,8 @@ export const ReserveFromUserId = id => async dispatch => {
 };
 
 const initialState = {
-    list: []
+    list: [],
+    reservation: null
 }
 
 const reservationsReducer = (state = initialState, action) => {

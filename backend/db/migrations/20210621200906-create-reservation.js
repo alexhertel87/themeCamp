@@ -10,17 +10,13 @@ module.exports = {
       },
       userId: {
         allowNull: false,
-        unique: true,
         type: Sequelize.INTEGER
       },
       campId: {
         allowNull: false,
-        unique: true,
         type: Sequelize.INTEGER
       },
-      reviewId: {
-        allowNull: false,
-        unique: true,
+      reviewId: {       
         type: Sequelize.INTEGER
       },
       startDate: {

@@ -4,13 +4,15 @@
 }
 
 .reservations-div {
+  display: flex;
+  align-items: center;
   /* background-color: hotpink; */
   border: 4px solid rgb(13, 214, 214);
   border: 4px solid blueviolet;
   font-family: Nunito;
 }
 
-#bookedTitle {
+#bookingHeader {
   display: flex;
   justify-content: center;
   border: 4px solid blueviolet;

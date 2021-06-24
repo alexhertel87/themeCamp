@@ -7,42 +7,47 @@ const { Reservation } = require('../../db/models')
 const router = express.Router();
 
 router.get(
-    '/',
-    asyncHandler(async (req, res) => {
-      const reservations = await Reservation.findAll();
-      return res.json(reservations)
-    }),
-  )
+  '/',
+  asyncHandler(async (req, res) => {
+    const reservations = await Reservation.findAll();
+    return res.json(reservations)
+  }),
+);
 
-  router.get(
-    '/user/:id',
-    asyncHandler(async (req, res) => {
+router.get(
+  '/user/:id',
+  asyncHandler(async (req, res) => {
+    try {
       const reservations = await Reservation.findAll({
         where: {
           userId: req.params.id
         }
       });
       return res.json(reservations)
-    }),
-  )
+    }
+    catch (e) {
+      console.log("e ---> ", e);
+    }
+  })
+);
 
 router.get(
-    '/:id',
-    asyncHandler(async (req, res) => {
-      const reservations = await Reservation.findByPk(req.params.id);
-      return res.json(reservations)
-    }),
-  )
+  '/:id',
+  asyncHandler(async (req, res) => {
+    const reservations = await Reservation.findByPk(req.params.id);
+    return res.json(reservations)
+  }),
+);
 
 router.post(
   '/',
-  asyncHandler(async(req,res) => {
-    const {userId, campId, reviewId, startDate, endDate} = req.body;
-    const reservation = await Reservation.create({userId, campId, reviewId, startDate, endDate});
+  asyncHandler(async (req, res) => {
+    const { userId, campId, reviewId, startDate, endDate } = req.body;
+    const reservation = await Reservation.create({ userId, campId, reviewId, startDate, endDate });
     return res.json({
-      reservation,
+      reservation
     })
   })
-)
+);
 
 module.exports = router;

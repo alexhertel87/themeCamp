@@ -8,12 +8,12 @@ function Splash() {
     const { photoUrl } = usePhotoContext()
 
     return (
-        <div className='splashComponent'>
-            <div>
-                Splash div
-            </div>
-            <div className='slideshow'>slideshow div
+        <div className='splashComponent'>Splash Component
+            <div className='splashContainer'>Splash Container
+            <div className='slideshow'>Slideshow div
                 <Slideshow />
+            </div>
+
             </div>
         </div>
     )
