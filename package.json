@@ -15,10 +15,10 @@
     "sequelize-cli": "npm run --prefix backend sequelize-cli",
     "start": "npm start --prefix backend",
     "db:migrate": "heroku run npx sequelize-cli db:migrate",
-		"db:migrate:undo:all": "heroku run npx sequelize-cli db:migrate:undo:all",
-		"db:redo": "npm run db:seed:undo:all && npm run db:migrate:undo:all && npm run db:migrate && npm run db:seed:all",
-		"db:seed:all": "heroku run npx sequelize-cli db:seed:all",
-		"db:seed:undo:all": "heroku run npx sequelize-cli db:seed:undo:all"
+    "db:migrate:undo:all": "heroku run npx sequelize-cli db:migrate:undo:all",
+    "db:redo": "npm run db:seed:undo:all && npm run db:migrate:undo:all && npm run db:migrate && npm run db:seed:all",
+    "db:seed:all": "heroku run npx sequelize-cli db:seed:all",
+    "db:seed:undo:all": "heroku run npx sequelize-cli db:seed:undo:all"
   },
   "repository": {
     "type": "git",
@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/alexhertel87/themeCamp/issues"
   },
-  "homepage": "https://github.com/alexhertel87/themeCamp#readme"
+  "homepage": "https://github.com/alexhertel87/themeCamp#readme",
+  "dependencies": {
+    "redux-persist": "^6.0.0"
+  }
 }
