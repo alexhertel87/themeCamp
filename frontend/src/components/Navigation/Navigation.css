@@ -1,6 +1,6 @@
 nav {
   display: grid;
- background-color: #1B2026;
+  background-color: #1B2026;
   grid-template-columns: repeat(3, 1fr);
   /* box-shadow: 2px 2px 15px #BFAF8F, -2px 2px 15px #BFAF8F; */
   width: 100vw;

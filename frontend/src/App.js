@@ -30,8 +30,8 @@ function App() {
         <Switch>
           <Route path='/' exact>
             <Splash isLoaded={isLoaded} />
-            <CampsComponent isLoaded={isLoaded}/>
             <ReservationsComponent isLoaded={isLoaded}/>
+            <CampsComponent isLoaded={isLoaded}/>
           </Route>
           <Route path='/camps/:id'>
             <CampPageComponent isLoaded={isLoaded}/>

@@ -10,9 +10,9 @@ function Splash() {
     return (
         <div className='splashComponent'>
             <div>
-                Hello
+                Spash div
             </div>
-            <div className='slideshow'>Hello
+            <div className='slideshow'>slideshow div
                 <Slideshow />
             </div>
         </div>

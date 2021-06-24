@@ -4,7 +4,7 @@ import stockImages from "../Splash/imageArr";
 import '../Splash/Splash.css'
 
 const images = stockImages;
-const delay = 5000;
+const delay = 3500;
 
 export default function Slideshow() {
   const [index, setIndex] = React.useState(0);
