@@ -34,7 +34,7 @@ function ReservationsComponent() {
                             </div>
                         ))
                 ) : (
-                    <h3>You have no active reservations. Would you like to book one?</h3>
+                    <h3 className='h3Div'>You have no active reservations. Would you like to book one?</h3>
                 )}
             </div>
         )
