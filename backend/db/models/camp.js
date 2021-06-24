@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     longitude: DataTypes.DECIMAL
   }, {});
   Camp.associate = function(models) {
-    Camp.belongsTo(models.Reservation, { foreignKey: 'campId' })
+    Camp.hasMany(models.Reservation, { foreignKey: 'campId' })
     Camp.hasMany(models.Review, { foreignKey: 'campId' })
     Camp.hasMany(models.Image, { foreignKey: 'campId' })
     Camp.hasMany(models.GiftItem, {foreignKey: 'campId'})

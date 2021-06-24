@@ -1,8 +1,8 @@
 .campsOuterDiv {
-  color: #e01515;
+  color: #000000;
   display: grid;
   grid-template-columns: 50px repeat(5, 1fr) 50px;
-  grid-template-rows: 20px repeat(5, 1fr) 20px;
+  grid-template-rows: 50px repeat(5, 1fr) 50px;
   /* background-color: indigo; */
   border: 5px solid rgb(64, 226, 43);
 }
@@ -13,6 +13,7 @@
   display: flex;
   justify-content: center;
   font-family: Nunito;
+  border: 5px solid rgb(226, 43, 89);
 }
 
 .campLink {

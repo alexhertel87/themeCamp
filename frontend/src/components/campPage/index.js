@@ -5,70 +5,71 @@ import { useParams } from 'react-router';
 import { getOneCamp } from '../../store/camps';
 import { newReservation } from '../../store/reservations';
 
+import { Redirect } from 'react-router'
+import { useHistory } from 'react-router'
+
 function CampPageComponent({ isLoaded }) {
     const dispatch = useDispatch()
     const { id } = useParams();
+    const history = useHistory();
 
     useEffect(() => {
         dispatch(getOneCamp(id))
-    }, [dispatch])
+    }, [dispatch, id])
 
     const currentCamp = useSelector(state => state.camps.currentCamp);
     const currentUser = useSelector(state => state.session.user)
+    // console.log("currentCamp -->", currentCamp);
+    // console.log("currentUser -->", currentUser);
 
     const [startDate, setStartDate] = useState(new Date())
     const [endDate, setEndDate] = useState(new Date())
 
 
-    const handleSubmit = async (e) => {
+    const HandleSubmit = async (e) => {
         e.preventDefault();
 
-        const userId = parseInt(currentUser.id, 10);
-        const campId = currentCamp.id;
-        const reviewId = currentCamp.id;
-
         const payload = {
-            userId,
-            campId,
-            reviewId,
+            userId: currentUser?.id,
+            campId: currentCamp?.id,
+            reviewId: 1,
             startDate: startDate,
             endDate: endDate,
-
         }
+        console.log('currentUser -->', currentUser);
 
-        const reservation = dispatch(newReservation(payload))
-
-        if (reservation) {
-            const title = document.getElementById('bookedTitle');
-            title.CamperHTML = "You are Booked! Enjoy your visit! And, don't forget: 'Safety Third!'"
-        }
+        dispatch(newReservation(payload))
+        console.log("Payload: -> ", payload);
+        history.push('/')
 
     }
 
     return (
         <div className='campDiv'>
-            <h1>{currentCamp?.name}</h1>
+            <h1 className='campName'>{currentCamp?.name}</h1>
             <form
-            onSubmit={handleSubmit}
+            className='resForm'
+            onSubmit={HandleSubmit}
             >
-            <h2 id='bookedTitle'>Book Your Visit Now!</h2>
-                <label>
-                    Start Date
+            <h2 id='bookingHeader'>Book Your Visit Now!</h2>
+                <label className='startResLabel'>
+                    Arrival Date
                     <input
+                    className='calInput'
                     type="date"
                     value={startDate}
                     onChange={(e) => {
-                        setStartDate(e.target.value);
-                        console.log('START DATE ========> ', e.target.value)}} />
+                        setStartDate(e.target.value);}} />
                 </label>
-                <label>
-                    End Date
+                <label className='endResLabel'>
+                    Departure Date
                     <input
+                    className='calInput'
                     type="date"
                     value={endDate}
                     onChange={(e) => {setEndDate(e.target.value)}} />
                 </label>
-                <button>Confirm Booking</button>
+                <button className='bookingButton'>Confirm Your Stay!</button>
             </form>
         </div>
     )

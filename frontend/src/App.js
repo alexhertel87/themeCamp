@@ -36,12 +36,12 @@ function App() {
           <Route path='/camps/:id'>
             <CampPageComponent isLoaded={isLoaded}/>
           </Route>
-          <Route path='/camps/:id'>
+          {/* <Route path='/camps/:id'>
             <CampPageComponent isLoaded={isLoaded}/>
-          </Route>
+          </Route> */}
         </Switch>
       )}
-      <Footer />
+      <Footer isLoaded={isLoaded}/>
     </div>
   );
 }
