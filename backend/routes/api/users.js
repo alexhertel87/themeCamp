@@ -1,6 +1,7 @@
 // backend/routes/api/users.js
 const express = require('express')
 const router = express.Router();
+const bcrypt = require('bcryptjs')
 const asyncHandler = require('express-async-handler');
 
 const { setTokenCookie, requireAuth } = require('../../utils/auth');

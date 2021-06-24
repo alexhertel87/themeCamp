@@ -10,7 +10,7 @@ function Splash() {
     return (
         <div className='splashComponent'>
             <div>
-                Spash div
+                Splash div
             </div>
             <div className='slideshow'>slideshow div
                 <Slideshow />

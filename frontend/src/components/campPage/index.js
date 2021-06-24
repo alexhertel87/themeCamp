@@ -52,23 +52,25 @@ function CampPageComponent({ isLoaded }) {
             onSubmit={handleSubmit}
             >
             <h2 id='bookedTitle'>Book Your Visit Now!</h2>
-                <label>
+                <label className='startResLabel'>
                     Start Date
                     <input
+                    className='calInput'
                     type="date"
                     value={startDate}
                     onChange={(e) => {
                         setStartDate(e.target.value);
                         console.log('START DATE ========> ', e.target.value)}} />
                 </label>
-                <label>
+                <label className='endResLabel'>
                     End Date
                     <input
+                    className='calInput'
                     type="date"
                     value={endDate}
                     onChange={(e) => {setEndDate(e.target.value)}} />
                 </label>
-                <button>Confirm Booking</button>
+                <button className='bookingButton'>Confirm Your Stay!</button>
             </form>
         </div>
     )

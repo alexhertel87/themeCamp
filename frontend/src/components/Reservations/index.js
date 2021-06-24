@@ -28,7 +28,7 @@ function ReservationsComponent() {
                         reservations.map((reservation, i) => (
                             <div>
                                 <h3>Reservation #{i + 1}</h3>
-                                <li>Camp: {camps[reservation.campId].name}</li>
+                                <li>Camp: {camps[reservation.campId].campName}</li>
                                 <li>Start of Stay: {reservation.startDate}</li>
                                 <li>End of Stay: {reservation.endDate}</li>
                             </div>
