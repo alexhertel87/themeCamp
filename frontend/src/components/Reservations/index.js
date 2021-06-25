@@ -16,19 +16,23 @@ function ReservationsComponent({ isLoaded }) {
 
     if (reservations !== undefined) {
         return (
-            <div > reservationsContainer
+            <div >
                 <h2 className='resDiv'>Your Reservations</h2>
                 {reservations.length !== 0 ? (
                     reservations.map((reservation, i) => (
                         <div className='reservation-1'>
                             <h3 className='reserve-head'>Reservation #{i + 1}</h3>
-                            <li>Camp: {camps[reservation.campId]?.campName}</li>
+                            <li className='campName'>Camp: {camps[reservation.campId]?.campName}</li>
                             <li>Start of Stay: {reservation?.startDate}</li>
                             <li>End of Stay: {reservation?.endDate}</li>
                         </div>
                         ))
                 ) : (
-                    <h3 className='h3Div'>You have no active reservations. Would you like to book one? Please log in to book a stay!</h3>
+                        <h3 className='h3Div'>
+                            <h4 className='temph4'>You have no active reservations. Would you like to book one?</h4>
+                            <h4 className='temph4'>Please log in to book a stay!</h4>
+                        </h3>
+
                 )}
             </div>
         )

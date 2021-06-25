@@ -29,7 +29,7 @@ module.exports = {
       },
       {
         userId: '4',
-        campName: 'Camp )?( Questionmark',
+        campName: 'Camp )?(',
         address: '2:30 & Esplanade',
         description: "Camp Questionmark is a community of people that come together to celebrate life through music. Music to feel. Music to provide low end fulfillment and vibrate your 3rd eye permanently open. The balance between sacred & rage. And the love for both. Transcend through complete audio bliss. We do as much as we can to facilitate this & the camp's existence. Working all year to do a large week long free event in Black Rock City. Doing it for the love of doing it. And put everything & then some, back into it for growth. 100% of everything [and more] go directly into the project, and couldn't happen without all of the help and hard work given by everyone involved. Come experience what passion built!",
         latitude: 40.78333,

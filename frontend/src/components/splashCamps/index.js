@@ -14,20 +14,24 @@ const CampsComponent = () => {
     const recentCamps = useSelector(state => state.camps.list)
 
     return (
-        <div className='campsContainerDiv'> Camps container div
-            <h2 className='recentCampsTitle'>Check some camps! (id='recentCampsTitle')</h2>
-                <div className='huh'>
-                        What is this?
-                </div>
-            <div> CampsOuterDivGrid
-             <div>
+        <div >
+            <h2 className='recentCampsTitle'>Check Out Our Awesome Camps!</h2>
+            <div className='campsOuterDivGrid'>
+
                     {recentCamps.map((camp, i) => (
-                        <Link to={`camps/${camp.id}`}
-                        id={`camp-${i + 1}`}
-                        className='campLink'
-                        key={camp.id}>{camp.name}
-                    </Link>))}
-            </div>
+                        <div className='campsDiv'>
+                            <Link>
+                                <img className='campPics' src={camp.Images[0]?.url} alt='images'/>
+                            </Link>
+                            <Link
+                                to={`camps/${camp.id}`}
+                                id={`camp-${i + 1}`}
+                                className='campLink'
+                                key={camp.id}>{camp.campName}
+                            </Link>
+
+                        </div>
+                    ))}
             </div>
         </div>
     )

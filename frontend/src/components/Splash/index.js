@@ -14,12 +14,12 @@ function Splash() {
         <>
             <div className='splashComponent'>
                 <ReservationsComponent />
-                <div className='splashContainer'>Splash Container
+                <div className='splashContainer'>
                     <Slideshow />
-                </div>
+                    <CampsComponent />
+            <div>
             </div>
-            <div className='campsOuterDivGrid'>
-            {/* <CampsComponent /> */}
+                </div>
             </div>
         </>
     )
