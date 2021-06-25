@@ -29,12 +29,6 @@ function App() {
   const user = useSelector(state => state.session.user)
 
   useEffect(() => {
-    if (!user) {
-      history.push('/')
-    }
-  }, [history, user])
-
-  useEffect(() => {
     dispatch(ReserveFromUserId(user?.id));
   }, [dispatch, user])
 
@@ -47,7 +41,6 @@ function App() {
         <Switch>
           <Route path='/' exact>
             <Splash isLoaded={isLoaded} />
-            <ReservationsComponent isLoaded={isLoaded}/>
             <CampsComponent isLoaded={isLoaded}/>
           </Route>
           <Route path='/camps/:id'>

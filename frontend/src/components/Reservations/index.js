@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCamps, getOneCamp } from '../../store/camps';
 import { ReserveFromUserId } from '../../store/reservations';
-import './Reservations.css'
+// import './Reservations.css'
 
 function ReservationsComponent({ isLoaded }) {
     const dispatch = useDispatch();
@@ -16,7 +16,7 @@ function ReservationsComponent({ isLoaded }) {
 
     if (reservations !== undefined) {
         return (
-            <div className='reservations-div'>
+            <div > reservationsContainer
                 <h2 className='resDiv'>Your Reservations</h2>
                 {reservations.length !== 0 ? (
                     reservations.map((reservation, i) => (
@@ -28,7 +28,7 @@ function ReservationsComponent({ isLoaded }) {
                         </div>
                         ))
                 ) : (
-                    <h3 className='h3Div'>You have no active reservations. Would you like to book one?</h3>
+                    <h3 className='h3Div'>You have no active reservations. Would you like to book one? Please log in to book a stay!</h3>
                 )}
             </div>
         )

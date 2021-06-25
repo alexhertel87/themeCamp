@@ -1,4 +1,4 @@
-.campsOuterDiv {
+.campsOuterDivGrid {
   color: #000000;
   display: grid;
   grid-template-columns: 50px repeat(5, 1fr) 50px;
@@ -6,10 +6,13 @@
   /* background-color: indigo; */
   border: 5px solid rgb(64, 226, 43);
 }
+.campsContainerDiv {
+  border: 5px solid rgb(235, 7, 178);
 
-#recentCampsTitle {
-  grid-column: 1 / 8;
-  grid-row: 2 / 4;
+}
+.recentCampsTitle {
+  grid-column: 3 / 5;
+  grid-row: 2 / 6;
   display: flex;
   justify-content: center;
   font-family: Nunito;
@@ -23,16 +26,20 @@
 }
 
 #camp-1 {
+  /* border: 1px solid black; */
   grid-column: 2;
   grid-row: 4;
 }
 
 #camp-2 {
+  /* border: 1px solid black; */
   grid-column: 3;
   grid-row: 4;
 }
 
 #camp-3 {
+  /* border: 1px solid black; */
+
   grid-column: 4;
   grid-row: 4;
 }

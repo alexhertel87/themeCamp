@@ -35,11 +35,9 @@ export default function Slideshow() {
       <div className="slideshow">
         <div
           className="slideshowSlider"
-          style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
-        >
-          <div>
-
-          </div>
+          style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
+          {/* <div>
+          </div> */}
           {images.map((img) => (
             <div
               className="slide"

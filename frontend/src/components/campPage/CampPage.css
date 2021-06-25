@@ -3,19 +3,20 @@
   font-family: Nunito;
 }
 
-.reservations-div {
+/* .reservationsContainer {
   display: flex;
-  align-items: center;
-  /* background-color: hotpink; */
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: hotpink;
   border: 4px solid rgb(13, 214, 214);
   border: 4px solid blueviolet;
   font-family: Nunito;
-}
+} */
 
-#bookingHeader {
+.bookingHeader {
   display: flex;
   justify-content: center;
-  border: 4px solid blueviolet;
+  border: 4px solid rgb(226, 43, 43);
 }
 .calInput, .bookingButton{
   font-family: Nunito;

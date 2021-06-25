@@ -3,9 +3,14 @@
 }
 
 .splashComponent {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "sidebar splash";
   /* display: flex; */
     width: 100vw;
-    height: 700px;
+    /* height: 500px; */
     /* background-color: cadetblue; */
     border: 5px solid blueviolet;
     box-sizing: border-box;
@@ -13,14 +18,36 @@
 }
 
 .splashContainer{
+  grid-area: splash;
+  width: 100%;
   border: 5px solid rgb(226, 183, 43);
 
 }
 
+.reservationsContainer {
+  grid-area: sidebar;
+  box-sizing: content-box;
+  position: absolute;
+  left: 0px;
+  /* float: left; */
+  width: 20px;
+  border: 4px solid rgb(73, 226, 43);
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  /* background-color: hotpink; */
+  /* border: 4px solid rgb(13, 214, 214); */
+  font-family: Nunito;
+}
+.reservation-1 {
+  font-family: Nunito;
+}
 .slideshow {
-    margin: 0 auto;
+
+    margin: auto;
     overflow: auto;
-    max-width: 800px;
+    width: 500px;
+    height: 500px;
     border: 5px solid rgb(226, 43, 89);
 }
 
@@ -35,18 +62,48 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 600px;
+    height: 500px;
     width: 100%;
     border-radius: 40px;
   }
 
+  .campDiv {
+    color: #0f0e0e;
+    font-family: Nunito;
+  }
+
+
+
+  .bookingHeader {
+    display: flex;
+    justify-content: center;
+    border: 4px solid blueviolet;
+  }
+  .calInput, .bookingButton{
+    font-family: Nunito;
+  }
+
+  .startLabel, .endLabel {
+    /* display: flex;
+    justify-content: center; */
+    border: 4px solid rgb(49, 226, 43);
+  }
+  .resDiv, .h3Div {
+    /* display: flex;
+    justify-content: center; */
+    font-family: Nunito;
+    width: auto;
+    border: 2px solid rgb(206, 31, 60);
+  }
+
+
   /* Buttons */
 
-.slideshowDots {
+/* .slideshowDots {
     text-align: center;
   }
 
-  /* .slideshowDot {
+  .slideshowDot {
     display: inline-block;
     height: 20px;
     width: 20px;

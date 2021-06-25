@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import './CampPage.css'
+// import './CampPage.css'
 import { useParams } from 'react-router';
 import { getOneCamp } from '../../store/camps';
 import { newReservation } from '../../store/reservations';

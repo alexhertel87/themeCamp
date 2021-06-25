@@ -15,14 +15,19 @@ const CampsComponent = () => {
 
     return (
         <div className='campsContainerDiv'> Camps container div
-            <div className='campsOuterDiv'> Camps Outer Div
-            <h2 id='recentCampsTitle'>Check some camps! (id='recentCampsTitle')</h2>
-                <div>
-
+            <h2 className='recentCampsTitle'>Check some camps! (id='recentCampsTitle')</h2>
+                <div className='huh'>
+                        What is this?
                 </div>
-                    <div>
-                        {recentCamps.map((camp, i) => (<Link to={`camps/${camp.id}`} id={`camp-${i+1}`} className='campLink' key={camp.id}>{camp.name}</Link>))}
-                    </div>
+            <div> CampsOuterDivGrid
+             <div>
+                    {recentCamps.map((camp, i) => (
+                        <Link to={`camps/${camp.id}`}
+                        id={`camp-${i + 1}`}
+                        className='campLink'
+                        key={camp.id}>{camp.name}
+                    </Link>))}
+            </div>
             </div>
         </div>
     )
