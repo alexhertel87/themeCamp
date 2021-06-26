@@ -125,7 +125,7 @@ module.exports = {
       },
       {
         userId: '16',
-        campName: 'The Tree of Téneré',
+        campName: 'Tree of Téneré',
         address: 'Deep Playa',
         description: 'An enormous lifelike tree, Ténéré offers shade to wanderers, adventure to climbers, and transcendent community to those gathered beneath its 15,000 LED leaves. Like its namesake – considered the most isolated tree on Earth until its destruction in 1973 – Ténéré serves as a place of refuge and ritual for desert wanderers. Standing more than three stories tall, it beckons to passersby with the promise of shade and adventure, conjuring spontaneous communities out of desert sand and sun. At night, LEDs hidden within each leaf begin to glow. The 15,000 leaves form a dome-shaped “canvas of light” that towers over the playa, spanning more than a thousand square feet. Participants lying under the tree experience sublime light shows set to ambient music or live performance. And they directly influence the canopy lights through their sounds and biorhythms, creating moments of transcendent oneness with each other and with nature.',
         latitude: 40.78962,
@@ -133,7 +133,7 @@ module.exports = {
       },
       {
         userId: '17',
-        campName: 'Temple of Gravity (The Hippy Crusher)',
+        campName: 'Hippy Crusher',
         address: 'Deep Playa',
         description: 'Gravity is a central component of all of Zachary Coffin’s massive, larger-than-life interactive kinetic sculptures and the only force that he believes he can truly have faith in. In 2003, Zachary Coffin built the Temple of Gravity as an expression of the year’s Burning Man theme – Beyond Belief – and this year, we’re bringing the massive 180,000 pound sculpture back for Radical Ritual. The Temple of Gravity is a 60-foot diameter steel dome with 5 arms, each arm supports a suspended granite stone slab (which weighs ~15,000 pounds) and is anchored by a granite base slab.',
         latitude: 40.79813,
@@ -157,7 +157,7 @@ module.exports = {
       },
       {
         userId: '20',
-        campName: 'Death Guild Thunderdome',
+        campName: 'Thunderdome',
         address: '4:30 & Esplanade',
         description: "Originally established in 1999 as a Theme Camp at Burning Man in the Nevada Black Rock Desert, Death Guild Thunderdome grew out of one of the longest running gothic night clubs (Death Guild) in San Francisco. DGTD was intended to “provide a place for some good music” at the Burning Man event, primarily as an alternative to the rave culture at the time. Taking its cue from the famous Mad Max series of post-apocalyptic films, Death Guild Thunderdome erects a geodesic dome as an arena for “fights” to take place, hangs bungees from the top with harnesses for participants to be strapped into, and provides foam boffer “weapons” to each “fighter.” Participants swing through the Dome, pummeling each other while the music blares and camp members provide a post-apocalyptic ambiance and theatrical experience.",
         latitude: 40.77987,
@@ -165,7 +165,7 @@ module.exports = {
       },
       {
         userId: '21',
-        campName: 'The Flower Tower',
+        campName: 'Flower Tower',
         address: 'Deep Playa',
         description: 'The Flower Tower is a 70 foot tall metal structure ornately decorated by thousands of painted metal flowers, some of which will blow fire.',
         latitude: 40.79369,
@@ -173,7 +173,7 @@ module.exports = {
       },
       {
         userId: '22',
-        campName: 'The Temple of Awareness',
+        campName: 'Temple of Awareness',
         address: 'Deep Playa',
         description: 'Temples offer environments for us to immerse ourselves into an unworldly place of harmony and peace. The Temple of Awareness is an organic form, similar to a pine cone. Seen from above, it evokes aspects of a bloomed lotus. The Temple is a 13-sided dome structure that is 35 ft. in diameter at the base. It has seven levels that reach 35 ft. high, each level with projecting decorative wings encircling it.',
         latitude: 40.78798,

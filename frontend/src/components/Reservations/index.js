@@ -16,7 +16,7 @@ function ReservationsComponent({ isLoaded }) {
 
     if (reservations !== undefined) {
         return (
-            <div >
+            <div className='allRes'>
                 <h2 className='resDiv'>Your Reservations</h2>
                 {reservations.length !== 0 ? (
                     reservations.map((reservation, i) => (

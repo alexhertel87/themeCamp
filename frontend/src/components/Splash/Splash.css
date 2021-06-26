@@ -3,7 +3,7 @@ body{
 }
 .splashComponent {
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas:
   "sidebar splash";
@@ -39,17 +39,27 @@ div.reservation-1 {
   margin-left: 30px;
   padding: 10px;
 }
+.WelcomeText {
+  display: flex;
+  justify-content: center;
+  color: #0f0e0e;
+  font-family: Nunito;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
 .slideshow {
     margin: auto;
     overflow: auto;
-    width: 745px;
+    width: 700px;
+
     /* height: 600px; */
     /* border: 5px solid rgb(226, 43, 89); */
 }
 
 .slideshowSlider {
     white-space: nowrap;
-    transition: ease 1000ms;
+    transition: ease 400ms;
     /* border: 10px solid blueviolet; */
 }
 
@@ -69,34 +79,60 @@ div.reservation-1 {
   }
 
 .reservation-1{
-  margin-left: 20px;
-  background-color: rgba(83, 80, 80, 0.25);
+  margin-left: 10px;
+  margin-top: 5px;
+  background-color: rgba(121, 119, 117, 0.15);
+
 }
 
   .resDiv {
     display: flex;
     justify-content: center;
+    background-color: rgba(121, 119, 117, 0.15);
+
+    box-shadow: coral;
+    margin-top: 55px;
+    /* margin-left: 50px; */
+
     /* border: 4px solid blueviolet; */
     /* border-radius: 5%; */
   }
-  .calInput, .bookingButton{
+  /* .calInput, .bookingButton{
     font-family: Nunito;
-  }
+  } */
 
-  .startLabel, .endLabel {
-    /* border: 4px solid rgb(49, 226, 43); */
-  }
+
   .resDiv, .h3Div {
+    box-sizing: border-box;
     font-family: Nunito;
-    width: auto;
-    background-color: rgba(83, 80, 80, 0.25);
-    border-radius: 3%;
+    /* width: auto; */
+    /* border: 1px solid black; */
+    background-color: rgba(121, 119, 117, 0.15);
+    border-radius: 10px;
     margin-left: 30px;
+    box-shadow: rgba(255, 127, 80, 0.952);
     /* border: 2px solid rgb(206, 31, 60); */
   }
+
+.allRes {
+
+}
+
+  /* .allRes {
+    box-sizing: content-box;
+    height: 350px;
+    font-family: Nunito;
+    background-color: rgba(236, 164, 91, 0.15);
+    border-radius: 10px;
+    margin-left: 30px;
+    box-shadow: rgba(255, 127, 80, 0.603);
+  } */
+
   .temph4 {
     display: block;
     margin-left: 10px;
+
+    /* border: 3px solid black; */
   }
 
   .campLink {

@@ -20,7 +20,9 @@ const CampsComponent = () => {
 
                     {recentCamps.map((camp, i) => (
                         <div className='campsDiv'>
-                            <Link>
+                            <Link
+                            to={`camps/${camp.id}`}
+                            id={`camp-${i + 1}`}>
                                 <img className='campPics' src={camp.Images[0]?.url} alt='images'/>
                             </Link>
                             <Link

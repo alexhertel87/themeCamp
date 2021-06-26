@@ -4,7 +4,7 @@ import stockImages from "../Splash/imageArr";
 import '../Splash/Splash.css'
 
 const images = stockImages;
-const delay = 3500;
+const delay = 4500;
 
 export default function Slideshow() {
   const [index, setIndex] = React.useState(0);
@@ -33,6 +33,7 @@ export default function Slideshow() {
 
     return (
       <div className="slideshow">
+        <div className='WelcomeText'>Welcome!</div>
         <div
           className="slideshowSlider"
           style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
