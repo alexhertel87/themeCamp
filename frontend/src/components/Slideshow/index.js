@@ -34,6 +34,8 @@ export default function Slideshow() {
     return (
       <div className="slideshow">
         <div className='WelcomeText'>Welcome!</div>
+        <>
+        </>
         <div
           className="slideshowSlider"
           style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>

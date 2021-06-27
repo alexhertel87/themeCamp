@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCamps, getOneCamp } from '../../store/camps';
 import { ReserveFromUserId } from '../../store/reservations';
+import { Link } from 'react-router-dom';
 // import './Reservations.css'
 
 function ReservationsComponent({ isLoaded }) {
@@ -25,6 +26,7 @@ function ReservationsComponent({ isLoaded }) {
                             <li className='campName'>Camp: {camps[reservation.campId]?.campName}</li>
                             <li>Start of Stay: {reservation?.startDate}</li>
                             <li>End of Stay: {reservation?.endDate}</li>
+                            <Link to={`/reservation/edit/${reservation.id}`} type="submit">Edit Reservation</Link>
                         </div>
                         ))
                 ) : (

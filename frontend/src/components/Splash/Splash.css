@@ -3,7 +3,7 @@ body{
 }
 .splashComponent {
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas:
   "sidebar splash";
@@ -37,29 +37,38 @@ div.reservation-1 {
   border: rgb(196, 188, 188);
   border-radius: 3%;
   margin-left: 30px;
-  padding: 10px;
+  margin-right: 20px;
+  /* margin-top: 10px; */
+  /* padding: 10px; */
 }
 .WelcomeText {
   display: flex;
   justify-content: center;
   color: #0f0e0e;
+  border: black;
+  /* box-shadow:
+  3px 3px 20px #b78fbf,
+  -3px 3px 20px #e7872e,
+  3px -3px 20px #e7872e,
+  -3px -3px 20px #e7872e; */
   font-family: Nunito;
   font-size: 32px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .slideshow {
     margin: auto;
     overflow: auto;
     width: 700px;
-
+    
     /* height: 600px; */
-    /* border: 5px solid rgb(226, 43, 89); */
+    border-radius: 20px;
 }
 
 .slideshowSlider {
     white-space: nowrap;
     transition: ease 400ms;
+
     /* border: 10px solid blueviolet; */
 }
 
@@ -72,7 +81,9 @@ div.reservation-1 {
     width: 100%;
     border-radius: 40px;
   }
+div.slide {
 
+}
   .campDiv {
     color: #0f0e0e;
     font-family: Nunito;
@@ -82,16 +93,52 @@ div.reservation-1 {
   margin-left: 10px;
   margin-top: 5px;
   background-color: rgba(121, 119, 117, 0.15);
-
+  box-shadow:
+  3px 3px 10px #62e72e,
+  -3px 3px 10px #2e84e7,
+  /* 3px -3px 15px #2ed1e7, */
+  -3px -3px 10px #62e72e;
 }
+.reservation-1 > a {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  background-color: rgba(255, 127, 80, 0.552);
+  border-radius: 5px;
+}
+.reservation-1 > li {
+  display: flex;
+  justify-content: center;
+}
+.profile-dropdown {
+  border-radius: 5px;
+  }
 
-  .resDiv {
-    display: flex;
-    justify-content: center;
-    background-color: rgba(121, 119, 117, 0.15);
-
-    box-shadow: coral;
-    margin-top: 55px;
+.editUser > a {
+  text-decoration: none;
+  color: white;
+   }
+.editUser > a:hover {
+border-radius: 5px;
+text-decoration: none;
+color: white;
+background-color: rgba(255, 127, 80, 0.552);
+}
+.resDiv {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(121, 119, 117, 0.15);
+  /* padding: 10px; */
+  box-shadow:
+  3px 3px 20px #b78fbf,
+  -3px 3px 20px #e7872e,
+  /* 3px -3px 20px #e7872e, */
+  -3px -3px 20px #e7872e;
+  border-radius: 10px;
+  margin-top: 55px;
+  margin-right: 18px;
     /* margin-left: 50px; */
 
     /* border: 4px solid blueviolet; */
@@ -103,6 +150,8 @@ div.reservation-1 {
 
 
   .resDiv, .h3Div {
+    /* display: flex; */
+    /* justify-content: center; */
     box-sizing: border-box;
     font-family: Nunito;
     /* width: auto; */
@@ -110,14 +159,28 @@ div.reservation-1 {
     background-color: rgba(121, 119, 117, 0.15);
     border-radius: 10px;
     margin-left: 30px;
-    box-shadow: rgba(255, 127, 80, 0.952);
+    box-shadow: rgba(255, 127, 80, 0.852);
     /* border: 2px solid rgb(206, 31, 60); */
   }
 
-.allRes {
-
+h3.h3Div{
+  box-shadow:
+  3px 3px 10px #62e72e,
+  -3px 3px 10px #2e84e7,
+  /* 3px -3px 15px #2ed1e7, */
+  -3px -3px 10px #62e72e;
 }
 
+.reserve-head {
+  display: flex;
+  justify-content: center;
+}
+
+li.campName {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(255, 80, 118);
+}
   /* .allRes {
     box-sizing: content-box;
     height: 350px;

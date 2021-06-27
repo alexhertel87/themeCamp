@@ -4,11 +4,14 @@ import './CampPage.css'
 import { useParams } from 'react-router';
 import { getOneCamp } from '../../store/camps';
 import { newReservation } from '../../store/reservations';
+import { usePhotoContext } from '../../context/PhotoContext';
 
 import { Redirect } from 'react-router'
 import { useHistory } from 'react-router'
 
 function CampPageComponent({ isLoaded }) {
+    const { photoUrl } = usePhotoContext()
+
     const dispatch = useDispatch()
     const { id } = useParams();
     const history = useHistory();

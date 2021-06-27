@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 function LoginForm() {
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ function LoginForm() {
           <li key={idx}>{error}</li>
         ))}
       </ul>
-      <label>
+      <label className='modal-label'>
         Username or Email
         <input
           type="text"
@@ -36,7 +37,7 @@ function LoginForm() {
           required
         />
       </label>
-      <label>
+      <label className='modal-label'>
         Password
         <input
           type="password"
