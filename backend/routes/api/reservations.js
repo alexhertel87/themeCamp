@@ -32,7 +32,7 @@ router.get(
 );
 
 router.get(
-  '/:id',
+  '/:id(\\d+)',
   asyncHandler(async (req, res) => {
     const reservations = await Reservation.findByPk(req.params.id);
     return res.json(reservations)
@@ -49,5 +49,46 @@ router.post(
     })
   })
 );
+
+router.put(
+  '/:id(\\d+)',
+  asyncHandler(async (req, res, next) => {
+    const reservationId = parseInt(req.params.id, 10);
+    const reservation = await Reservation.findByPk(reservationId);
+    const { start_date, end_date } = req.body;
+
+    if (reservation) {
+      await reservation.update({start_date: start_date, end_date: end_date})
+      return res.json({reservation});
+    } else {
+      const reservationNotFoundError = (reservationId) => {
+        const error = new Error("Reservation Not Found");
+        error.status = 404;
+        return error
+      }
+      next(reservationNotFoundError(reservationId))
+    }
+  }),
+);
+
+router.delete(
+  '/:id(\\d+)',
+  asyncHandler(async(req,res,next) => {
+    const reservationId = parseInt(req.params.id, 10);
+    const reservation = await Reservation.findByPk(reservationId);
+
+    if (reservation) {
+      await reservation.destroy();
+      return res.json(reservation)
+    } else {
+      const reservationNotFoundError = (reservationId) => {
+        const error = new Error("Reservation Not Found");
+        error.status = 404;
+        return error
+    }
+    next(reservationNotFoundError(reservationId));
+    }
+  })
+)
 
 module.exports = router;

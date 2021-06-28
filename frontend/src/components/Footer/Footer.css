@@ -18,3 +18,9 @@
 .footer-text{
     margin-left: 20px;
 }
+
+.footer-element, .footerIcon {
+    color: white;
+    text-decoration: none;
+    margin-left: 80px;
+}

@@ -5,6 +5,7 @@ import { useParams } from 'react-router';
 import { getOneCamp } from '../../store/camps';
 import { newReservation } from '../../store/reservations';
 import { usePhotoContext } from '../../context/PhotoContext';
+import { getGifts } from '../../store/giftItems';
 
 import { Redirect } from 'react-router'
 import { useHistory } from 'react-router'
@@ -88,6 +89,9 @@ function CampPageComponent({ isLoaded }) {
                     )}
                 </div>
             </form>
+        <div className='giftsDiv'>
+
+        </div>
         </div>
     )
 }

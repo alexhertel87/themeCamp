@@ -8,10 +8,10 @@
   flex-wrap: wrap;
   width: auto;
   box-shadow:
-  3px 3px 10px #62e72e,
-  -3px 3px 10px #2e84e7,
-  /* 3px -3px 15px #2ed1e7, */
-  -3px -3px 10px #62e72e;
+  3px 3px 20px #fc940d,
+  -3px 3px 10px #d507f0,
+  3px -3px 15px #d507f0,
+  -3px -3px 10px #2ed1e7;
   /* border: 1px solid black; */
   background-color: rgba(121, 119, 117, 0.15);
   border-radius: 10px;

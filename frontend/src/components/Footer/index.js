@@ -6,12 +6,16 @@ export default function Footer() {
     return (
         <footer className='footer'>
             <div className='footer-text'>
-                Built by: Alex Hertel
+                Built by: Alexander H. Hertel
             </div>
-            <div>  </div>
-            <div url='https://www.linkedin.com/in/ahertel2287/'>LinkedIn
-                <Link to='https://www.linkedin.com/in/ahertel2287/' />
+            <div className='footer-element'>
+                <a className='footerIcon' href='https://www.linkedin.com/in/ahertel2287/'><i className='fab fa-linkedin'></i> LinkedIn</a>
             </div>
+            <div className='footer-element'>
+                <a className='footerIcon' href='https://www.github.com/alexhertel87'>
+                    <i className='fab fa-github'></i> GitHub</a>
+            </div>
+
         </footer>
     )
 }

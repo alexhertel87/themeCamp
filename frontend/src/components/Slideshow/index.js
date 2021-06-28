@@ -33,7 +33,7 @@ export default function Slideshow() {
 
     return (
       <div className="slideshow">
-        <div className='WelcomeText'>Welcome!</div>
+        <div className='WelcomeText'>Welcome to Black Rock City!</div>
         <>
         </>
         <div

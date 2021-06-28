@@ -16,6 +16,7 @@ import ReservationsComponent from "./components/Reservations";
 import { ReserveFromUserId } from '././store/reservations';
 import EditUserForm from "./components/EditUserForm";
 import EditReservationForm from "./components/EditReservationForm";
+import GiftItemsComponent from "./components/GiftItemsComponent";
 
 
 // import Slideshow from './components/Slideshow'
@@ -45,7 +46,8 @@ function App() {
             <Splash isLoaded={isLoaded} />
           </Route>
           <Route path='/camps/:id'>
-            <CampPageComponent isLoaded={isLoaded}/>
+            <CampPageComponent isLoaded={isLoaded} />
+            {/* <GiftItemsComponent isLoaded={isLoaded} /> */}
           </Route>
           <Route path='/user/edit/:id'>
               {!user ? <Redirect to="/" /> : null}

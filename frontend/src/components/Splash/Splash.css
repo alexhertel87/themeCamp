@@ -46,6 +46,7 @@ div.reservation-1 {
   justify-content: center;
   color: #0f0e0e;
   border: black;
+  font-weight: 1000;
   /* box-shadow:
   3px 3px 20px #b78fbf,
   -3px 3px 20px #e7872e,
@@ -60,7 +61,7 @@ div.reservation-1 {
     margin: auto;
     overflow: auto;
     width: 700px;
-    
+
     /* height: 600px; */
     border-radius: 20px;
 }
@@ -96,8 +97,8 @@ div.slide {
   box-shadow:
   3px 3px 10px #62e72e,
   -3px 3px 10px #2e84e7,
-  /* 3px -3px 15px #2ed1e7, */
-  -3px -3px 10px #62e72e;
+  3px -3px 15px #2ed1e7,
+  -3px -3px 10px #2e84e7;
 }
 .reservation-1 > a {
   display: flex;
