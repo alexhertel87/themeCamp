@@ -1,7 +1,7 @@
 import { csrfFetch } from './csrf';
 
 const LOAD = 'api/camps/LOAD'
-const LOAD_RECENT = 'api/camps/LOAD'
+const LOAD_RECENT = 'api/camps/LOAD_RECENT'
 const LOAD_ONE = 'api/camps/id'
 
 const load = (list) => ({

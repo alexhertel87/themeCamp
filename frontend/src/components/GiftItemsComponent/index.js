@@ -15,7 +15,7 @@ import { Redirect } from 'react-router';
 //   }, [dispatch, id])
 //   const currentCamp = useSelector(state => state.camps.currentCamp);
 //   const allGifts = useSelector(state => state.gifts.list)
-  
+
 
   // return (
   //   <div className='giftsDiv'>

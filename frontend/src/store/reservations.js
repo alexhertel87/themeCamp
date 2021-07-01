@@ -99,10 +99,17 @@ const reservationsReducer = (state = initialState, action) => {
             }
             return newState
         }
-        case DELETE_RESERVATION: {
+        // case DELETE_RESERVATION: {
+        //     const newState = {
+        //         ...state,
+        //         reservations: action.payload
+        //     }
+        //     return newState
+        // }
+        case LOAD_ONE: {
             const newState = {
                 ...state,
-                reservations: action.payload
+                reservation: action.payload
             }
             return newState
         }

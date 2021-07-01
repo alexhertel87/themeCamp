@@ -72,21 +72,22 @@ router.put(
 );
 
 router.delete(
-  '/:id(\\d+)',
+  '/user/:id',
   asyncHandler(async(req,res,next) => {
-    const reservationId = parseInt(req.params.id, 10);
-    const reservation = await Reservation.findByPk(reservationId);
+    const id = parseInt(req.params.id, 10);
+    console.log("id ---> ", id);
+    const reservation = await Reservation.findByPk(id);
 
     if (reservation) {
       await reservation.destroy();
       return res.json(reservation)
     } else {
-      const reservationNotFoundError = (reservationId) => {
+      const reservationNotFoundError = (id) => {
         const error = new Error("Reservation Not Found");
         error.status = 404;
         return error
     }
-    next(reservationNotFoundError(reservationId));
+    next(reservationNotFoundError(id));
     }
   })
 )

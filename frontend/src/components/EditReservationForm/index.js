@@ -17,16 +17,16 @@ function EditReservationForm() {
         dispatch(getOneReservation(id))
     }, [dispatch, id]);
 
-    useEffect(() => {
-        dispatch(getOneCamp(id))
-    }, [dispatch, id])
 
     const currentReservation = useSelector(state => state.reservations.currentReservation);
-    const currentUser = useSelector(state => state.session.user);
+
+    useEffect(() => {
+        dispatch(getOneCamp(currentReservation?.campId))
+    }, [dispatch, currentReservation?.campId])
+
+    
     const currentCamp = useSelector(state => state.camps.currentCamp);
 
-    // const [startDate, setStartDate] = useState(currentReservation?.start_date)
-    // const [endDate, setEndDate] = useState(currentReservation?.end_date)
 
     const reservationDiv = document.getElementById('reservationDiv')
 
@@ -35,7 +35,7 @@ function EditReservationForm() {
 
         dispatch(cancelReservation(currentReservation?.id))
 
-        reservationDiv.innerHTML = 'Canceled!!'
+        // reservationDiv.innerHTML = 'Cancelled!!!'
 
         setTimeout(() => {
             history.push('/')
